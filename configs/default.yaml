@@ -1,0 +1,23 @@
+# Default configuration for the agent application
+
+redis:
+  address: "localhost:6379"  # Redis host and port
+  password: ""               # Redis password, leave blank if not used
+  db: 0                      # Redis database number
+
+agent:
+  defaultRole: "worker"      # default role: "manager" or "worker"
+  beliefUpdateInterval: 1000 # interval to update beliefs in milliseconds
+  maxConcurrentTasks: 5      # maximum number of concurrent tasks
+
+logging:
+  level: "info"              # log level: debug, info, warn, error
+  format: "text"             # log format: text or json
+
+simulation:
+  enabled: true              # enable the demo simulation
+  tickInterval: 100ms        # simulation tick interval
+
+# Additional parameters can be added as needed
+# eventBusChannels: ["task", "status"]
+# agentCount: 10
